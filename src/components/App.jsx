@@ -13,22 +13,13 @@ export const App = () => {
   const feedback = { good, neutral, bad };
 
   const handleFeedback = item => {
-    // switch (item) {
-    //   case 'good':
-    //     setGood(prevState => prevState + 1);
-    //     break;
-    //   case 'neutral':
-    //     setNeutral(prevState => prevState + 1);
-    //     break;
-    //   case 'bad':
-    //     setBad(prevState => prevState + 1);
-    //     break;
-    //   default:
-    //     throw new Error(`Unsuppurted case "${item}".`);
-    // }
-    if (item === 'good') setGood(prevState => prevState + 1);
-    else if (item === 'neutral') setNeutral(prevState => prevState + 1);
-    else if (item === 'bad') setBad(prevState => prevState + 1);
+    if (item === 'good') {
+      setGood(prevState => prevState + 1);
+    } else if (item === 'neutral') {
+      setNeutral(prevState => prevState + 1);
+    } else if (item === 'bad') {
+      setBad(prevState => prevState + 1);
+    }
   };
 
   function countTotalFeedback() {
